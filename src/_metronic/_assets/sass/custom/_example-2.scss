@@ -1,0 +1,470 @@
+//
+// Custom Example 2 Style
+// Here you can put your custom sass code, use global SASS mixings and variables to override the theme or add new styles according to your requirements.
+// Most of the changes can be achieved via global or layout level sass variable changes.
+//
+
+.color_1
+{
+    color: #c0d532 !important;
+}
+.bg_color_1
+{
+    background-color: #c0d532 !important;
+}
+
+.color_2
+{
+    color: #1791b1 !important;
+}
+.bg_color_2
+{
+    background-color: #1791b1 !important;
+}
+
+.color_white
+{
+    color:white !important;
+}
+
+.bg_color_white
+{
+    background-color:white !important;
+}
+
+.font_bold
+{
+    font-weight: bold;
+}
+
+
+.table_dqlab thead tr
+{
+
+}
+
+.table_dqlab thead tr th
+{
+    font-weight: bold;
+    color:#1791b1 !important;
+}
+
+.table_dqlab tbody .blank_space
+{
+    height: 100px;
+}
+
+.table_dqlab tbody tr td
+{
+
+}
+
+.custom_top_menu_container
+{
+    display: table-row;
+    height: 100%;
+}
+
+.custom_top_menu_item
+{
+    padding: 0 5px;
+    height: 100%;
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.my_card
+{
+  box-shadow: none;
+  cursor: pointer;
+  height: 100%;
+  margin-bottom: 20px;
+  position: relative;
+  transition: all 200ms;
+  padding:20px;
+  border-radius: 0.5rem;
+  background-color: white;
+  color:#646c9a;
+
+}
+
+.my_card:hover
+{
+  /* box-shadow: 0 1px 15px 1px rgba(69,65,78,.08);
+  -webkit-box-shadow:-1 1px 15px 1px rgba(69,65,78,.08);
+  -moz-box-shadow:0 1px 15px 1px rgba(69,65,78,.08); */
+  box-shadow: 0 1px 15px 1px rgba(23,145,177,0.5);
+  -webkit-box-shadow:-1 1px 15px 1px rgba(23,145,177,0.5);
+  -moz-box-shadow:0 1px 15px 1px rgba(23,145,177,0.5);
+  transition: all 200ms;
+}
+
+.my_card .course_type.free
+{
+color:#70B032;
+}
+
+.my_card .course_type.premium
+{
+color:#1791b1;
+}
+
+.my_card .label-counter
+{
+  padding:3px 12px;
+  border:2px solid #1791b1;
+  color:#1791b1;
+  font-weight: bold;
+  float:left;
+  margin-top:10px;
+}
+
+.my_card .m-portlet__body
+{
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.my_card .m-widget14
+{
+  display: flex;
+  flex:1;
+  flex-direction: column;
+}
+
+.my_card .m-widget14 .main_content
+{
+  flex:1;
+}
+
+.my_card .course_progress
+{
+  position: absolute;
+  top:10px;
+  right:10px;
+}
+
+.my_card .course_progress .react-sweet-progress-symbol
+{
+  color:white;
+}
+
+.my_card .m-widget14 .m-widget14__title
+{
+  margin-bottom: 10px;
+}
+
+.course_detail .m-widget27 .m-widget27__pic
+{
+  height: 268px;
+  display:flex;
+  align-items: center;
+}
+
+.course_detail .m-widget27 .m-widget27__pic>img
+{
+  width: auto;
+  height: auto;
+  max-height: 100%;
+  margin: auto;
+}
+
+.m-aside-left.m-aside-left--skin-dark
+{
+  background-color: #fafafa;
+  min-height: calc(100vh - 70px);
+}
+
+.m-aside-menu.m-aside-menu--skin-dark .m-menu__nav>.m-menu__item.m-menu__item--active>.m-menu__heading .m-menu__link-icon, .m-aside-menu.m-aside-menu--skin-dark .m-menu__nav>.m-menu__item.m-menu__item--active>.m-menu__link .m-menu__link-icon,
+.m-aside-menu.m-aside-menu--skin-dark .m-menu__nav>.m-menu__item.m-menu__item--active>.m-menu__heading .m-menu__link-text, .m-aside-menu.m-aside-menu--skin-dark .m-menu__nav>.m-menu__item.m-menu__item--active>.m-menu__link .m-menu__link-text
+{
+  color: #1791b1;
+}
+
+.m-aside-menu.m-aside-menu--skin-dark .m-menu__nav>.m-menu__item:not(.m-menu__item--parent):not(.m-menu__item--open):not(.m-menu__item--expanded):not(.m-menu__item--active):hover,
+.m-aside-menu.m-aside-menu--skin-dark .m-menu__nav>.m-menu__item.m-menu__item--open
+{
+  background-color: #efefef;
+}
+
+/* .m-aside-menu .m-menu__nav .m-menu__inner, .m-aside-menu .m-menu__nav .m-menu__submenu
+{
+  display: block;
+  max-height: 0px;
+  opacity: 0.0;
+  transition: max-height 200ms 0ms, opacity 200ms 0ms;
+}
+
+.m-aside-menu .m-menu__nav .m-menu__item.m-menu__item--open>.m-menu__inner, .m-aside-menu .m-menu__nav .m-menu__item.m-menu__item--open>.m-menu__submenu
+{
+  display: block;
+  max-height: 1000px;
+  opacity: 1.0;
+  transition: max-height 200ms 0ms, opacity 200ms 0ms;
+} */
+
+body.m-aside-left--skin-dark .m-header .m-header-head
+{
+  box-shadow: none;
+}
+.m-login.m-login--2 .m-login__wrapper .m-login__container .m-login__form .m-form__group .form-control
+{
+    border-radius: 0px !important;
+}
+
+
+.m-header-search .m-header-search__wrapper
+{
+    background: white;
+    color: #1791b1;
+}
+
+.m-header-menu .m-menu__nav>.m-menu__item.m-menu__item--active>.m-menu__link>.m-menu__item-here, .m-header-menu .m-menu__nav>.m-menu__item.m-menu__item--expanded>.m-menu__link>.m-menu__item-here
+{
+    color: #1791b1;
+}
+
+.m-brand.m-brand--skin-dark
+{
+  background:white;
+}
+
+@media (min-width: 1025px){
+    .m-brand
+    {
+        /* width:175px; */
+    }
+
+    .m-header-search.m-header-search--expandable
+    {
+        width: 200px;
+    }
+}
+
+.m-header-search .m-header-search__wrapper
+{
+    background: white;
+    border:1px solid #1791b1;
+}
+
+.exam_detail_overlay
+{
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    background: rgba(23,145,177, 0.8);
+    z-index: 10000;
+    display: flex;
+    align-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+    padding: 50px;
+}
+
+.exam_detail_content
+{
+    margin:auto;
+    max-width: 500px;
+}
+
+.home_exam_coming_soon_overlay
+{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    display: flex;
+    align-content: center;
+    align-items: center;
+}
+.home_exam_coming_soon_overlay h3
+{
+    margin: auto;
+    color: white;
+    padding: 10px 20px;
+    background: #1791b1;
+}
+
+.loading_overlay
+{
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    background: white;
+    z-index: 10000;
+    display: flex;
+    align-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+    padding: 50px;
+}
+
+.loading_overlay_content
+{
+    margin:auto;
+    max-width: 500px;
+}
+
+.btn-outline-white
+{
+    border-color: white;
+    color: white !important;
+}
+
+.btn-outline-white:hover
+{
+    border-color: white;
+    background-color: white !important;
+    color: #1791b1 !important;
+}
+
+.btn.btn-dqlab-1
+{
+    color: white;
+    background: #c0d532;
+}
+
+.btn.btn-dqlab-1:hover
+{
+    color: white;
+    background: #a0b512;
+}
+
+.btn.btn-outline-dqlab-1
+{
+    background-color: transparent;
+    color: #c0d532;
+    border-color: #c0d532;
+}
+
+.btn.btn-outline-dqlab-1:hover
+{
+    color: white;
+    background: #c0d532;
+    border-color: #c0d532;
+}
+
+
+.btn.btn-dqlab-2
+{
+    color: white;
+    background: #1791b1;
+}
+
+.btn.btn-dqlab-2:hover
+{
+    color: white;
+    background: #0781a1;
+}
+
+.btn.btn-outline-dqlab-2
+{
+    background-color: transparent;
+    color: #1791b1;
+    border-color: #1791b1;
+}
+
+.btn.btn-outline-dqlab-2:hover
+{
+    color: white;
+    background: #1791b1;
+    border-color: #1791b1;
+}
+
+.home_banner_top
+{
+    height: 200px;
+    width: 100%;
+    left: 0px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.home_banner_top_overlay
+{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    background-image: linear-gradient(
+      rgba(242, 243, 248, 0),
+      rgba(242, 243, 248, 1)
+    );
+    display: flex;
+    text-align: center;
+    align-content: center;
+    align-items: center;
+    padding-top:0px;
+}
+
+.home_banner_top_overlay h3
+{
+    margin: auto;
+    color: #1791b1;
+    background: white;
+    padding:10px;
+}
+
+.popup_cart_item
+{
+    padding: 10px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #efefef;
+}
+
+.blurred
+{
+  -webkit-filter: blur(5px);
+  -moz-filter: blur(5px);
+  -o-filter: blur(5px);
+  -ms-filter: blur(5px);
+  filter: blur(5px);
+}
+
+.blurred-25
+{
+  -webkit-filter: blur(15px);
+  -moz-filter: blur(15px);
+  -o-filter: blur(15px);
+  -ms-filter: blur(15px);
+  filter: blur(15px);
+}
+
+
+.grayscaled
+{
+  -webkit-filter: grayscale(100%);
+  -moz-filter: grayscale(100%);
+  -o-filter: grayscale(100%);
+  -ms-filter: grayscale(100%);
+  filter: grayscale(100%);
+}
+
+/*EXAM DETAIL*/
+.exam_detail_widget_title
+{
+
+}
+
+.exam_detail_widget_desc
+{
+
+}
+
+.exam_detail_widget_value
+{
+    color: #c0d532;
+    font-size: 1.2rem;
+    font-weight: 600;
+}

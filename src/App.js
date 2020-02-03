@@ -1,68 +1,41 @@
-import React, { Component } from 'react';
-// import logo from './logo.svg';
-import ReactDom from 'react-dom';
-import { 
-  Route,
-  Link,
-  Switch,
-  Redirect
-} from 'react-router-dom';
+import React, { Component } from "react";
+import "./App.css";
+import Home from "./pages/content/Home.jsx";
+import AppBarHeader from "./pages/navigation/AppBarHeader.jsx";
 
-import Home from './pages/content/Home';
+class App extends Component {
+	constructor(props) {
+		super(props);
+		this.state = {
+			open: false
+		};
+	}
+	render() {
+		return (
+			<div className="App">
+				<AppBarHeader isOpen={this.state.open} />
 
-import PrimarySearchAppBar from './pages/navigation/AppBar';
-import ProLangCard from './pages/content/Home';
-
-
-class App extends Component{
-  render(){
-    return(
-      <div className="App">
-        <div className="App-header">
-          <PrimarySearchAppBar/>
-        </div>
-
-        {
-            /* 
-            <div className="menu">
-          <ul>
-            <li> <Link to="/">Home</Link></li>
-          </ul>
-        </div>
-        <div className="App-intro">
-          <Switch>
-            <Route exact path="/" component={Home}/>
-            <Redirect to="/" />
-          </Switch>
-        </div>
-            */
-
-        }
-        
-        
-      </div>
-
-
-    );
-  }
+				<Home isOpen={this.state.open} />
+			</div>
+		);
+	}
 }
 
 export default App;
 
-
 // <div className="App">
-    //   <header className="App-header">
-    //     <img src={logo} className="App-logo" alt="logo" />
-    //     <p>
-    //       Edit <code>src/App.js</code> and save to reload.
-    //     </p>
-    //     <a
-    //       className="App-link"
-    //       href="https://reactjs.org"
-    //       target="_blank"
-    //       rel="noopener noreferrer"
-    //     >
-    //       Learn React
-    //     </a>
-    //   </header>
-    // </div>
+//   <header className="App-header">
+//     <img src={logo} className="App-logo" alt="logo" />
+//     <p>
+//       Edit <code>src/App.js</code> and save to reload.
+//     </p>
+//     <a
+//       className="App-link"
+//       href="https://reactjs.org"
+//       target="_blank"
+//       rel="noopener noreferrer"
+//     >
+//       Learn React
+//     </a>
+//   </header>
+// </div>

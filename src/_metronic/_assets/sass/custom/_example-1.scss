@@ -1,0 +1,138 @@
+//
+// Custom Example 1 Style
+// Here you can put your custom sass code, use global SASS mixings and variables to override the theme or add new styles according to your requirements.
+// Most of the changes can be achieved via global or layout level sass variable changes.
+//
+
+
+.my-custom-style {
+    padding: 1rem 0.5rem;
+    color: kt-brand-color();
+
+    .my-custom-element {
+        margin-left: 1rem;
+    }
+}
+
+@include kt-tablet-and-mobile {
+    .my-custom-style {
+        padding: 0.5rem 0.25rem;
+
+        .my-custom-element {
+            margin-left: 0.5rem;
+        }
+    }
+}
+.btn-xeratic-red
+{
+  color:#fff;
+  background-color: #da2628;
+  border-color: #da2628;
+}
+
+.btn-xeratic-red:hover
+{
+  color:#fff;
+  background-color: #ba1618;
+  border-color: #ba1618;
+}
+
+.alert.alert-xeartic-black
+{
+  background:#000;
+  border-color:#000;
+  color:#fff;
+}
+
+.alert.alert-xeartic-red
+{
+  background:#da2628;
+  border-color:#da2628;
+  color:#fff;
+}
+
+.MuiFormLabel-root.Mui-focused
+{
+  color: #000 !important;
+}
+.kt-login.kt-login--v1 .kt-login__wrapper .kt-login__body .kt-login__form .kt-login__actions .kt-login__link-forgot:hover,
+.kt-login.kt-login--v1 .kt-login__wrapper .kt-login__head .kt-login__signup-link
+{
+  color: #da2628;
+}
+
+.kt-login.kt-login--v1 .kt-login__wrapper .kt-login__body .kt-login__form .kt-login__actions .kt-login__link-forgot:hover:after,
+.kt-link:hover:after
+{
+  border-bottom-color: #da2628;
+}
+
+.MuiInput-underline:focus:not(.Mui-focused):before, .MuiInput-underline:active:not(.Mui-focused):before, .MuiInput-underline:hover:not(.Mui-disabled):before,
+.MuiInput-underline:after
+{
+  border-bottom-color: #da2628 !important;
+}
+
+.MuiCheckbox-colorPrimary.Mui-checked
+{
+  color: #da2628 !important;
+}
+
+.MuiIconButton-colorPrimary:hover
+{
+  background-color: rgba(218,38,40,0.08) !important;
+}
+
+a
+{
+  color:#da2628;
+}
+
+a:hover
+{
+  color:#ba1618;
+}
+
+.btn-secondary:not(:disabled):not(.disabled):active, .btn-secondary:not(:disabled):not(.disabled).active, .show > .btn-secondary.dropdown-toggle
+{
+  background-color: #ff9698;
+  border-color: #ff9698;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  font-family: sans-serif;
+}
+
+.container > p {
+  font-size: 1rem;
+}
+
+.container > em {
+  font-size: .8rem;
+}
+
+.dropzone {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  border-width: 2px;
+  border-radius: 2px;
+  border-color: #eeeeee;
+  border-style: dashed;
+  background-color: #fafafa;
+  color: #bdbdbd;
+  outline: none;
+  transition: border .24s ease-in-out;
+}
+
+.dropzone:focus {
+  border-color: #2196f3;
+}
+
+.dropzone.disabled {
+  opacity: 0.6;
+}

@@ -1,33 +1,23 @@
-import React from "react";
-import { fade } from "@material-ui/core/styles";
 import AppBar from "@material-ui/core/AppBar";
-import Toolbar from "@material-ui/core/Toolbar";
-import IconButton from "@material-ui/core/IconButton";
-import Typography from "@material-ui/core/Typography";
-import InputBase from "@material-ui/core/InputBase";
 import Badge from "@material-ui/core/Badge";
-import MenuItem from "@material-ui/core/MenuItem";
+import CssBaseline from "@material-ui/core/CssBaseline";
+import IconButton from "@material-ui/core/IconButton";
+import InputBase from "@material-ui/core/InputBase";
 import Menu from "@material-ui/core/Menu";
-import MenuIcon from "@material-ui/icons/Menu";
-import SearchIcon from "@material-ui/icons/Search";
+import MenuItem from "@material-ui/core/MenuItem";
+import { fade, makeStyles, useTheme } from "@material-ui/core/styles";
+import Toolbar from "@material-ui/core/Toolbar";
+import Typography from "@material-ui/core/Typography";
 import AccountCircle from "@material-ui/icons/AccountCircle";
 import MailIcon from "@material-ui/icons/Mail";
-import NotificationsIcon from "@material-ui/icons/Notifications";
+import MenuIcon from "@material-ui/icons/Menu";
 import MoreIcon from "@material-ui/icons/MoreVert";
+import NotificationsIcon from "@material-ui/icons/Notifications";
+import SearchIcon from "@material-ui/icons/Search";
 import clsx from "clsx";
-import { makeStyles, useTheme } from "@material-ui/core/styles";
-import Drawer from "@material-ui/core/Drawer";
-import List from "@material-ui/core/List";
-import CssBaseline from "@material-ui/core/CssBaseline";
-import Divider from "@material-ui/core/Divider";
-import ChevronLeftIcon from "@material-ui/icons/ChevronLeft";
-import ChevronRightIcon from "@material-ui/icons/ChevronRight";
-import ListItem from "@material-ui/core/ListItem";
-import ListItemIcon from "@material-ui/core/ListItemIcon";
-import ListItemText from "@material-ui/core/ListItemText";
-import InboxIcon from "@material-ui/icons/MoveToInbox";
+import React from "react";
+import DrawerMenu from "./DrawerMenu.jsx";
 
-import { Button, Card, Image } from "semantic-ui-react";
 
 const drawerWidth = 250;
 
@@ -164,13 +154,13 @@ const useStyles = makeStyles(theme => ({
 	}
 }));
 
-export default function PrimarySearchAppBar() {
+export default function AppBarHeader(props) {
 	const classes = useStyles();
 	const theme = useTheme();
 	const [anchorEl, setAnchorEl] = React.useState(null);
 	const [mobileMoreAnchorEl, setMobileMoreAnchorEl] = React.useState(null);
 
-	const [open, setOpen] = React.useState(false);
+	const [open, setOpen] = React.useState(props.isOpen);
 
 	const isMenuOpen = Boolean(anchorEl);
 	const isMobileMenuOpen = Boolean(mobileMoreAnchorEl);
@@ -273,7 +263,7 @@ export default function PrimarySearchAppBar() {
 							className={clsx(classes.menuButton, {
 								[classes.hide]: open
 							})}
-							onClick={handleDrawerOpen}
+							onClick={open? handleDrawerOpen : handleDrawerClose}
 							color="inherit"
 							aria-label="open drawer"
 						>
@@ -336,132 +326,7 @@ export default function PrimarySearchAppBar() {
 					</Toolbar>
 				</AppBar>
 			</div>
-			{/* DRAWER */}
-			<Drawer
-				variant="permanent"
-				className={clsx(classes.drawer, {
-					[classes.drawerOpen]: open,
-					[classes.drawerClose]: !open
-				})}
-				classes={{
-					paper: clsx({
-						[classes.drawerOpen]: open,
-						[classes.drawerClose]: !open
-					})
-				}}
-			>
-				<div className={classes.toolbar}>
-					<IconButton onClick={handleDrawerClose}>
-						{theme.direction === "rtl" ? (
-							<ChevronRightIcon />
-						) : (
-							<ChevronLeftIcon />
-						)}
-					</IconButton>
-				</div>
-				<Divider />
-				<List>
-					{["Inbox", "Starred", "Send email", "Drafts"].map((text, index) => (
-						<ListItem button key={text}>
-							<ListItemIcon>
-								{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
-							</ListItemIcon>
-							<ListItemText primary={text} />
-						</ListItem>
-					))}
-				</List>
-				<Divider />
-				<List>
-					{["All mail", "Trash", "Spam"].map((text, index) => (
-						<ListItem button key={text}>
-							<ListItemIcon>
-								{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
-							</ListItemIcon>
-							<ListItemText primary={text} />
-						</ListItem>
-					))}
-				</List>
-			</Drawer>
-
-			<main className={clsx(classes.content, { [classes.contentShift]: open })}>
-				<div className={classes.toolbar} />
-
-				<Card.Group>
-					<Card>
-						<Card.Content>
-							<Image
-								floated="right"
-								size="large"
-								src="https://react.semantic-ui.com/images/avatar/large/steve.jpg"
-							/>
-							<Card.Header>Steve Sanders</Card.Header>
-							<Card.Meta>Friends of Elliot</Card.Meta>
-							<Card.Description>
-								Steve wants to add you to the group{" "}
-								<strong>best friends</strong>
-							</Card.Description>
-						</Card.Content>
-						<Card.Content extra>
-							<div className="ui two buttons">
-								<Button basic color="green">
-									Approve
-								</Button>
-								<Button basic color="red">
-									Decline
-								</Button>
-							</div>
-						</Card.Content>
-					</Card>
-					<Card>
-						<Card.Content>
-							<Image
-								floated="right"
-								size="large"
-								src="https://react.semantic-ui.com/images/avatar/large/molly.png"
-							/>
-							<Card.Header>Molly Thomas</Card.Header>
-							<Card.Meta>New User</Card.Meta>
-							<Card.Description>
-								Molly wants to add you to the group <strong>musicians</strong>
-							</Card.Description>
-						</Card.Content>
-						<Card.Content extra>
-							<div className="ui two buttons">
-								<Button basic color="green">
-									Approve
-								</Button>
-								<Button basic color="red">
-									Decline
-								</Button>
-							</div>
-						</Card.Content>
-					</Card>
-					<Card>
-						<Card.Content>
-							<Image
-								floated="right"
-								size="large"
-								src="https://react.semantic-ui.com/images/avatar/large/jenny.jpg"
-							/>
-							<Card.Header>Jenny Lawrence</Card.Header>
-							<Card.Meta>New User</Card.Meta>
-							<Card.Description>
-								Jenny requested permission to view your contact details
-							</Card.Description>
-						</Card.Content>
-						<Card.Content extra>
-							<div className="ui two buttons">
-								<Button basic color="green">
-									Approve
-								</Button>
-								<Button basic color="red">
-									Decline
-								</Button>
-							</div>
-						</Card.Content>
-					</Card>
-				</Card.Group>
-			</main>
+			<DrawerMenu/>
 			{renderMobileMenu}
 			{renderMenu}
 		</div>
