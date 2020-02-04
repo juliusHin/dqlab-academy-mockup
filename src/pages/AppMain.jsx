@@ -1,33 +1,31 @@
-import React from "react";
-import { fade } from "@material-ui/core/styles";
 import AppBar from "@material-ui/core/AppBar";
-import Toolbar from "@material-ui/core/Toolbar";
-import IconButton from "@material-ui/core/IconButton";
-import Typography from "@material-ui/core/Typography";
-import InputBase from "@material-ui/core/InputBase";
 import Badge from "@material-ui/core/Badge";
-import MenuItem from "@material-ui/core/MenuItem";
-import Menu from "@material-ui/core/Menu";
-import MenuIcon from "@material-ui/icons/Menu";
-import SearchIcon from "@material-ui/icons/Search";
-import AccountCircle from "@material-ui/icons/AccountCircle";
-import MailIcon from "@material-ui/icons/Mail";
-import NotificationsIcon from "@material-ui/icons/Notifications";
-import MoreIcon from "@material-ui/icons/MoreVert";
-import clsx from "clsx";
-import { makeStyles, useTheme } from "@material-ui/core/styles";
-import Drawer from "@material-ui/core/Drawer";
-import List from "@material-ui/core/List";
 import CssBaseline from "@material-ui/core/CssBaseline";
 import Divider from "@material-ui/core/Divider";
-import ChevronLeftIcon from "@material-ui/icons/ChevronLeft";
-import ChevronRightIcon from "@material-ui/icons/ChevronRight";
+import Drawer from "@material-ui/core/Drawer";
+import IconButton from "@material-ui/core/IconButton";
+import InputBase from "@material-ui/core/InputBase";
+import List from "@material-ui/core/List";
 import ListItem from "@material-ui/core/ListItem";
 import ListItemIcon from "@material-ui/core/ListItemIcon";
 import ListItemText from "@material-ui/core/ListItemText";
+import Menu from "@material-ui/core/Menu";
+import MenuItem from "@material-ui/core/MenuItem";
+import { fade, makeStyles, useTheme } from "@material-ui/core/styles";
+import Toolbar from "@material-ui/core/Toolbar";
+import Typography from "@material-ui/core/Typography";
+import AccountCircle from "@material-ui/icons/AccountCircle";
+import ChevronLeftIcon from "@material-ui/icons/ChevronLeft";
+import ChevronRightIcon from "@material-ui/icons/ChevronRight";
+import MailIcon from "@material-ui/icons/Mail";
+import MenuIcon from "@material-ui/icons/Menu";
+import MoreIcon from "@material-ui/icons/MoreVert";
 import InboxIcon from "@material-ui/icons/MoveToInbox";
-
-import { Button, Card, Image } from "semantic-ui-react";
+import NotificationsIcon from "@material-ui/icons/Notifications";
+import SearchIcon from "@material-ui/icons/Search";
+import clsx from "clsx";
+import React from "react";
+import CardListContent from "./content/Cards.jsx";
 
 const drawerWidth = 250;
 
@@ -161,10 +159,13 @@ const useStyles = makeStyles(theme => ({
 			duration: theme.transitions.duration.enteringScreen
 		}),
 		marginLeft: 0
+	},
+	media: {
+		height: 480
 	}
 }));
 
-export default function PrimarySearchAppBar() {
+export default function AppMain() {
 	const classes = useStyles();
 	const theme = useTheme();
 	const [anchorEl, setAnchorEl] = React.useState(null);
@@ -385,85 +386,11 @@ export default function PrimarySearchAppBar() {
 
 			<main className={clsx(classes.content, { [classes.contentShift]: open })}>
 				<div className={classes.toolbar} />
-
-				<Card.Group>
-					<Card>
-						<Card.Content>
-							<Image
-								floated="right"
-								size="large"
-								src="https://react.semantic-ui.com/images/avatar/large/steve.jpg"
-							/>
-							<Card.Header>Steve Sanders</Card.Header>
-							<Card.Meta>Friends of Elliot</Card.Meta>
-							<Card.Description>
-								Steve wants to add you to the group{" "}
-								<strong>best friends</strong>
-							</Card.Description>
-						</Card.Content>
-						<Card.Content extra>
-							<div className="ui two buttons">
-								<Button basic color="green">
-									Approve
-								</Button>
-								<Button basic color="red">
-									Decline
-								</Button>
-							</div>
-						</Card.Content>
-					</Card>
-					<Card>
-						<Card.Content>
-							<Image
-								floated="right"
-								size="large"
-								src="https://react.semantic-ui.com/images/avatar/large/molly.png"
-							/>
-							<Card.Header>Molly Thomas</Card.Header>
-							<Card.Meta>New User</Card.Meta>
-							<Card.Description>
-								Molly wants to add you to the group <strong>musicians</strong>
-							</Card.Description>
-						</Card.Content>
-						<Card.Content extra>
-							<div className="ui two buttons">
-								<Button basic color="green">
-									Approve
-								</Button>
-								<Button basic color="red">
-									Decline
-								</Button>
-							</div>
-						</Card.Content>
-					</Card>
-					<Card>
-						<Card.Content>
-							<Image
-								floated="right"
-								size="large"
-								src="https://react.semantic-ui.com/images/avatar/large/jenny.jpg"
-							/>
-							<Card.Header>Jenny Lawrence</Card.Header>
-							<Card.Meta>New User</Card.Meta>
-							<Card.Description>
-								Jenny requested permission to view your contact details
-							</Card.Description>
-						</Card.Content>
-						<Card.Content extra>
-							<div className="ui two buttons">
-								<Button basic color="green">
-									Approve
-								</Button>
-								<Button basic color="red">
-									Decline
-								</Button>
-							</div>
-						</Card.Content>
-					</Card>
-				</Card.Group>
+				<CardListContent />
 			</main>
 			{renderMobileMenu}
 			{renderMenu}
+
 		</div>
 	);
 }
